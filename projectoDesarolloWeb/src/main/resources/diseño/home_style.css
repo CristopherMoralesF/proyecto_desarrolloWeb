@@ -1,0 +1,120 @@
+/* --------------- header & navbar --------------- */
+
+header{
+    align-content: center; 
+}
+
+header img{
+    text-align: center;
+    margin: 15px;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 250px;
+    display: block;
+}
+#Bienvenida{
+    text-align: center; 
+}
+#Bienvenida img{
+    width: 500px;
+    padding: 25px
+}
+
+/* Da color a la barra y asigna su prioridad a la hora de mostrar la misma. */
+.navbar{
+    display: flex;
+    justify-content: center;
+    background-color: #47ACCD;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+/* Acomoda los items para que salgan uno a la par del otro */
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+    margin:  20px 0px;
+}
+
+/* Camba el tipo de letra y tamaño*/
+.navbar ul li {
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Cambia de color la letra, da un espacio entre los items a escoger */
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    transition: all .5s ease;
+}
+/* Da el efecto cuando se pasa el mouse por encima de los items */
+.navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+}
+
+table{
+    text-align: center;
+    padding: 15px;
+}
+
+/* Sección recomendaciones */
+#Recomendaciones h2 {
+    text-align: center;
+}
+#Recomendaciones p {
+    text-align: center;
+}
+#Recomendaciones table{
+    text-align: center;
+    padding: 25px;
+    margin: 50px;
+    border: 0px
+}
+#Recomendaciones table tr{
+    border: 0px; 
+}
+#Recomendaciones table td{
+    border: 0px;
+    padding: 25px; 
+}
+#Recomendaciones img{
+    width: 450px;
+    text-align: center; 
+}
+
+/* --------------- Formulario Ingreso de Sesion --------------- */
+#InicioSesion {
+    position: relative; 
+    margin: 100px; 
+    text-align: center;
+}
+
+#InicioSesion h2{
+    text-align: center;
+}
+
+#InicioSesion form {
+    text-align: center;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto; 
+        
+}
+
+#InicioSesion form input {
+    width: 350px;
+    height: 35px;
+    margin: 15px
+}
+
+.IngresarUsuario{
+    background-color: #47ACCD;
+    border: none; 
+    color: white; 
+}

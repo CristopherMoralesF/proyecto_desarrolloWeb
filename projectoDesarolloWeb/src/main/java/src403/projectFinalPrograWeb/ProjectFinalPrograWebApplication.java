@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ProjectFinalPrograWebApplication {
 
 	public static void main(String[] args) {
+                //Se inicia el modelo para ejecutar el index de la pag
 		SpringApplication.run(ProjectFinalPrograWebApplication.class, args);
 	}
 
