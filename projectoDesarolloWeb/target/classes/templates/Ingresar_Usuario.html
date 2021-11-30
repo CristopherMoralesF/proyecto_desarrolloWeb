@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title> Home </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="this is the main screen for the administrator">
+        <meta name="keywords" content="dentista,cita,administracion">
+        <link rel="stylesheet" href="" th:href="@{/css/home_style.css}"/>
+    </head>
+
+    <body>
+
+        <header>
+            <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
+
+            <nav class = "navbar">
+                <ul>
+                    <li> <a th:href="@{/}"> Sobre Nosotros </a> </li>
+                    <li> <a href="#home_admin"> Servicios </a> </li>
+                    <li> <a href="#home_admin"> Contactenos </a> </li>
+                    <li> <a href="Ingresar_Usuario.html"> Ingresar / Registrarse </a> </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <section id = "InicioSesion">
+
+            <h2> Inicio de Sesión </h2>
+            <p> Por favor ingrese la información solicitada </p>
+            <form action="InicioSesion">
+                <input type="email" 
+                       name="Usuario" 
+                       required
+                       placeholder="Por favor ingrese su usuario"
+                       />
+                <br>
+                <input type="password" 
+                       name="Contraseña" 
+                       required
+                       placeholder="Por favor ingrese su contraseña"
+                       />
+                <br>
+                <input class ="IngresarUsuario" type="submit" name="IngresarUsuario" />
+            </form>
+            
+            <a href="Ingresar_Usuario.html"> Olvide mi Contraseña </a>
+            <br>
+            <a th:href="@{/Crear Usuario}"> Crear Usuario </a>
+
+        </section>
+
+
+    </body>
+</html>

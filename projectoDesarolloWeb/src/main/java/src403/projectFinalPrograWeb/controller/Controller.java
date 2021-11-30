@@ -17,5 +17,12 @@ public class Controller {
         return "index";
 
     }
-
+    
+    @GetMapping("/Ingresar Usuario")
+    public String ingresar(){
+        
+        return "Ingresar_Usuario";
+        
+    }
+ 
 }

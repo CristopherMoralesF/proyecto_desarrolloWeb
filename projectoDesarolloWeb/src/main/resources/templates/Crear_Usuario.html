@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns = "http://www.w3.org/1999/xhtml">
+    <head>
+        <title> Home </title>
+        <link rel="stylesheet" th:href="@{/css/home_style.css}"/>
+    </head>
+
+    <body>
+
+        <header>
+            <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
+
+            <nav class = "navbar">
+                <ul>
+                    <li> <a th:href="@{/}"> Sobre Nosotros </a> </li>
+                    <li> <a href="#home_admin"> Servicios </a> </li>
+                    <li> <a href="#home_admin"> Contactenos </a> </li>
+                    <li> <a href="Ingresar_Usuario.html"> Ingresar / Registrarse </a> </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <section id = "InicioSesion">
+
+            <h2> Inicio de Sesión </h2>
+            <p> Por favor ingrese la información solicitada </p>
+            <form th:action="@{/Guardar Usuario}" th:object="${usuario}">
+                <input type="text" 
+                       name="Nombre" 
+                       required="true"
+                       placeholder="Por favor ingrese su nombre"
+                       th:field="*{nombre}"
+                       />
+                <br/>
+                <input type="text" 
+                       name="Apellidos" 
+                       required="true"
+                       placeholder="Por favor ingrese sus apellidos"
+                       th:field="*{apellidos}"
+                       />
+                <br/>
+                <input type="text" 
+                       name="Edad" 
+                       required="true"
+                       placeholder="Por favor ingrese su edad"
+                       th:field="*{edad}"
+                       />
+                <br/>
+                <input type="email" 
+                       name="Usuario" 
+                       required="true"
+                       placeholder="Por favor ingrese su correo"
+                       th:field="*{Correo}"
+                       />
+                <br/>
+                <input type="password" 
+                       name="Contraseña" 
+                       required="true"
+                       placeholder="Por favor ingrese su contraseña"
+                       />
+                <br/>
+                <input type="password" 
+                       name="confirmarContraseña" 
+                       required="true"
+                       placeholder="Por favor confirme su contraseña"
+                       />
+                <br/>
+                <input type="submit" th:value="#{accion.guardar}" name="guardar" value="Guardar Usuario"/>
+            </form>
+
+        </section>
+
+
+    </body>
+</html>
