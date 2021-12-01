@@ -158,6 +158,12 @@ table{
     text-align: center; 
 }
 
+/* --------> Estandar */
+.MensajeError{
+    color: red; 
+}
+
+
 /* --------------- Formulario Ingreso de Sesion --------------- */
 #InicioSesion {
     position: relative; 

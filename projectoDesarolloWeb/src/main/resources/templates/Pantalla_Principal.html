@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title> Home </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="this is the main screen for the administrator">
+        <meta name="keywords" content="dentista,cita,administracion">
+        <link rel="stylesheet" href="" th:href="@{/css/home_style.css}"/>
+    </head>
+
+    <body>
+
+        <header>
+            <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
+
+            <nav class = "navbar">
+                <ul>
+                    <li> <a href="index.html"> Sobre Nosotros </a> </li>
+                    <li> <a href="#home_admin"> Servicios </a> </li>
+                    <li> <a href="#home_admin"> Contactenos </a> </li>
+                    <li> <a href="#home_admin"> Mis Citas </a> </li>
+                    <li> <a href="#home_admin"> Información Usuario </a> </li>
+                 
+                </ul>
+            </nav>
+
+        </header>
+
+        <nav class = "navbar_index">
+            <ul>
+                <li> <a href="#Bienvenida"> Dra. Vargas </a> </li>
+                <li> <a href="#Instalaciones"> Instalaciones </a> </li>
+                <li> <a href="#Recomendaciones"> Recomendaciones </a> </li>
+            </ul>
+        </nav>
+        <section id = "Bienvenida">
+            
+            <header>
+                <h2> Dra. María Vargas Viquez </h2>    
+            </header>
+
+
+            <table border="0">
+                <thead>
+                    <tr>
+                        <th> <img src="" th:src="@{/image/Odontologa.png}" alt=""/></th>
+                        <td>
+                            <p> 
+                                La Dra. María Jesús Vargas Víquez es graduada de la Universidad Latinoamericana de Ciencia y Tecnología (ULACIT), adicionalmente a esto, la doctora cuenta con
+                                una especialización en cirugía y periodoncia. 
+                                <br><br>
+                                Con el objetivo de mejorar el servicio a sus clientes, la dra. Vargas cuenta con 3 cursos en estética dental y se describe a sí misma como una persona que ama su profesión e intenta dar su mejor desempeño
+                                con cada cliente, adicionalmente, su pasión por odontología pediátrica la hacen las mejor opción para los más pequeños del hogar. 
+                            </p>
+                        </td>
+                    </tr>
+                </thead>
+
+            </table>
+
+        </section>
+
+        <section id="Instalaciones">
+
+            <h2> Nuestras Instalaciones </h2>
+
+            <br>
+
+            <table border="0">
+                <thead>
+                    <tr>
+                        <th> 
+                            <p>
+
+                                No solo nuestro personal es altamente capacitado, adicionalmente, contamos con instalaciones modernas y adecuadas a las necesidades de nuestros clientes
+
+                            </p>
+                        </th>
+                        <td>
+
+                            <table border="0">
+                                <thead>
+                                    <tr>
+                                        <td> <img src="" th:src="@{/image/Instalaciones1.png}" alt=""/> </td>
+                                        <td> <img src="" th:src="@{/image/Instalaciones2.png}" alt=""/> </td>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> <img src="" th:src="@{/image/Instalaciones3.png}" alt=""/> </td>
+                                        <td> <img src="" th:src="@{/image/Instalaciones4.png}" alt=""/> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </td>
+                    </tr>
+                </thead>
+
+            </table>
+
+
+
+
+        </section>
+
+        <section id = "Recomendaciones">
+
+            <h2> Recomendaciones </h2>
+
+            <p>
+                Nuestros clientes es lo más importante, por ende, sus opiniones dirigen nuestro negocio. 
+            </p>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td> <img src="" th:src="@{/image/Recomendación1.png}" alt=""/> </td>
+                        <td> <img src="" th:src="@{/image/Recomendación2.png}" alt=""/> </td>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <img src="" th:src="@{/image/Recomendación3.png}" alt=""/> </td>
+                        <td> <img src="" th:src="@{/image/Recomendación4.png}" alt=""/> </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </section>
+
+
+    </body>
+</html>

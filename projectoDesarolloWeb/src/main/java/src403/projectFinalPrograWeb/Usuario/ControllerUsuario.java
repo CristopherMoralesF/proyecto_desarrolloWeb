@@ -3,6 +3,7 @@ package src403.projectFinalPrograWeb.Usuario;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
@@ -27,4 +28,23 @@ public class ControllerUsuario {
 
     }
 
+    @GetMapping("/Validar Usuario")
+    public String validarUsuario(Usuario usuario,Model model){
+        
+        if (usuarioService.validaUsuario(usuario)) {
+            
+            return "Pantalla_Principal";
+            
+        } else {
+            
+            var validacion = false; 
+            model.addAttribute("validacion",validacion);
+            return "Ingresar_Usuario";
+            
+        }
+        
+        
+        
+    }
+ 
 }

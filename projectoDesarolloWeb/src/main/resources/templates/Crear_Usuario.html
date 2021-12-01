@@ -59,6 +59,7 @@
                        name="Contraseña" 
                        required="true"
                        placeholder="Por favor ingrese su contraseña"
+                       th:field="*{contraseña}"
                        />
                 <br/>
                 <input type="password" 
@@ -67,11 +68,10 @@
                        placeholder="Por favor confirme su contraseña"
                        />
                 <br/>
-                <input type="submit" th:value="#{accion.guardar}" name="guardar" value="Guardar Usuario"/>
+                <input class="IngresarUsuario" type="submit" value="Crear Usuario" name="guardar"/>
             </form>
 
         </section>
-
 
     </body>
 </html>

@@ -33,4 +33,36 @@ public class UsuarioService {
         return usuarioDAO.findById(usuario.getId_usuarios()).orElse(null);
     }
 
+    //Valida si el usuario existe en la base de datos. 
+    public boolean validaUsuario(Usuario usuario) {
+
+        //recopila la información de todos los usuarios
+        Usuario usuarioEncontrado = null;
+        List<Usuario> misUsuarios = getUsuarios();
+
+        //Valida si existe el usuario que se ingreso en el sistema. 
+        for (Usuario miUsuario : misUsuarios) {
+
+            if (miUsuario.getCorreo().equalsIgnoreCase(usuario.getCorreo())) {
+                usuarioEncontrado = miUsuario;
+                break;
+            }
+
+        }
+
+        //Se valida si se encontró el usuario y si la contraseña es correcta. 
+        if (usuarioEncontrado == null) {
+            return false;
+        } else {
+
+            if (usuarioEncontrado.getContraseña().equals(usuario.getContraseña())) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
+    }
+
 }
