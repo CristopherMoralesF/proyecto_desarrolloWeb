@@ -194,3 +194,21 @@ table{
     border: none; 
     color: white; 
 }
+
+/* --------------- Sección Mis Clientes --------------- */
+#misClientes h2{
+    text-align: center; 
+}
+#misClientes table{
+    margin-left: auto; 
+    margin-right: auto; 
+    border: 1px; 
+    border-color: #47ACCD
+}
+#misClientes td{
+    padding: 20px; 
+}
+#misClientes th {
+    padding: 20px;
+    background-color: #47ACCD; 
+}   

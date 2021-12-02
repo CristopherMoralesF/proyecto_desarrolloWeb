@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns = "http://www.w3.org/1999/xhtml">
+    <head>
+        <title> Mis Clientes </title>
+        <link rel="stylesheet" th:href="@{/css/home_style.css}"/>
+    </head>
+
+    <body>
+
+        <header>
+            <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
+
+            <nav class = "navbar">
+                <ul>
+                    <li> <a th:href="@{/}"> Sobre Nosotros </a> </li>
+                    <li> <a href="#home_admin"> Servicios </a> </li>
+                    <li> <a href="#home_admin"> Contactenos </a> </li>
+                    <li> <a href="#home_admin"> Mis Clientes </a> </li> 
+                </ul>
+            </nav>
+
+        </header>
+
+        <section id = "misClientes">
+
+            <h2> Lista de Clientes </h2>
+
+            <div th:if="${usuarios !=null and !usuarios.empty}">
+                
+                <table>
+                    <tr>
+                        <th> Nombre </th>
+                        <th> Apellidos </th>
+                        <th> Edad </th>
+                        <th> Correo </th>
+                    </tr>
+                    <tr th:each="usuario : ${usuarios}">
+                        <td th:text="${usuario.nombre}"/>
+                        <td th:text="${usuario.apellidos}"/>
+                        <td th:text="${usuario.edad}"/>
+                        <td th:text="${usuario.Correo}"/>
+                    </tr>
+                </table>
+            </div>
+            <div th:if="${usuarios == null or usuarios.empty}">
+
+                <p> No se encuentran usarios registrados </p>
+
+            </div>
+
+
+        </section>
+
+    </body>
+</html>

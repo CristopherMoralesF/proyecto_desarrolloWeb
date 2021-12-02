@@ -29,22 +29,31 @@ public class ControllerUsuario {
     }
 
     @GetMapping("/Validar Usuario")
-    public String validarUsuario(Usuario usuario,Model model){
-        
+    public String validarUsuario(Usuario usuario, Model model) {
+
         if (usuarioService.validaUsuario(usuario)) {
-            
+
             return "Pantalla_Principal";
-            
+
         } else {
-            
-            var validacion = false; 
-            model.addAttribute("validacion",validacion);
+
+            var validacion = false;
+            model.addAttribute("validacion", validacion);
             return "Ingresar_Usuario";
-            
+
         }
+
+    }
+    
+    @GetMapping("/Mis Clientes")
+    public String listaClientes(Model model){
         
+        var usuarios = usuarioService.getUsuarios();
         
+        model.addAttribute("usuarios",usuarios);
+        
+        return "Mis_Clientes";
         
     }
- 
+
 }
