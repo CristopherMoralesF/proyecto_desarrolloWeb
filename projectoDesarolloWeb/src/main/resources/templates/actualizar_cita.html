@@ -1,0 +1,54 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" th:href="@{/css/home_style.css}"/>
+        <title>Citas</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <header>
+            <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
+
+            <nav class = "navbar">
+                <ul>
+                    <li> <a th:href="@{/}"> Sobre Nosotros </a> </li>
+                    <li> <a href="#home_admin"> Servicios </a> </li>
+                    <li> <a href="#home_admin"> Contactenos </a> </li>
+                    <li> <a href="Ingresar_Usuario.html"> Ingresar / Registrarse </a> </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <h2>[[#{cita.datos}]]</h2>
+        <hr/>
+        <a th:href="@{/}">[[#{accion.regresar}]]</a>
+        <br/>
+        <form th:action="@{/guardar}" 
+              th:object="${cita}">
+            <input type="hidden" name="id" th:field="*{id}"/>
+            <label for="Fecha">[[#{cita.fecha}]]:</label>
+            <input type="date" 
+                   required="true" 
+                   name="trip-start" 
+                   th:field="*{fecha}"/>
+            <br/>
+            <label for="Hora">[[#{cita.hora}]]:</label>
+            <input type="time" 
+                   required="true" 
+                   name="Hora" 
+                   th:field="*{hora}"/>
+            <br/>
+            <label for="tratamiento">[[#{cita.tratamiento}]]:</label>
+            <input type="text" 
+                   required="true" 
+                   name="tratamiento" 
+                   th:field="*{tratamiento}"/>
+            <br/>
+           
+            <input type="submit" th:value="#{accion.guardar}" name="guardar"/>
+        </form>
+        
+    </body>
+</html>
+

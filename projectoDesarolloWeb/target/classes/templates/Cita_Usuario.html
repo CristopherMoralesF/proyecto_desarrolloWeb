@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns = "http://www.w3.org/1999/xhtml">
+    <head>
+        <title> Home </title>
+        <link rel="stylesheet" th:href="@{/css/home_style.css}"/>
+    </head>
+
+    <body>
+
+        <header>
+            <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
+
+            <nav class = "navbar">
+                <ul>
+                    <li> <a th:href="@{/}"> Sobre Nosotros </a> </li>
+                    <li> <a href="#home_admin"> Servicios </a> </li>
+                    <li> <a href="#home_admin"> Contactenos </a> </li>
+                    <li> <a href="Ingresar_Usuario.html"> Ingresar / Registrarse </a> </li>
+                </ul>
+            </nav>
+
+        </header>
+
+   
+        <section id = "Inicio">
+       
+        <a th:href="@{/agregar}">[[#{cita.crear}]]</a>
+        <div th:if="${citas !=null and !cita.empty}">
+            <table border="1">
+                <tr>
+                    <th>[[#{cita.id_citas}]]</th>
+                    <th>[[#{cita.id_Usuario}]]</th>
+                    <th>[[#{cita.fecha}]]</th>
+                    <th>[[#{cita.hora}]]</th>
+                    <th>[[#{cita.tratamiento}]]</th>
+                    <th>[[#{accion.eliminar}]]</th>
+                    <th>[[#{accion.editar}]]</th>
+                </tr>
+                <tr th:each="cita : ${citas}">
+                    <td th:text="${cita.id_citas}"/>
+                    <td th:text="${cita.id_Usuario}"/>
+                    <td th:text="${cita.fecha}"/>
+                    <td th:text="${cita.hora}"/>
+                    <td th:text="${persona.tratamiento}"/>
+                    <td><a th:href="@{/eliminar/} + ${cita.id_cita}" th:text="#{accion.eliminar}"/></td>
+                    <td><a th:href="@{/editar/} + ${cita.id_cita}" th:text="#{accion.editar}"/></td>
+                </tr>
+            </table>
+        </div>
+        <div th:if="${cita == null or citas.empty}">
+            [[#{lista.citas.vacia}]]
+        </div>
+        
+        
+        </section> 
+
+    </body>
+</html>
