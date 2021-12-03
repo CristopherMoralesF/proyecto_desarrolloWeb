@@ -12,18 +12,25 @@ public class Controller {
     @GetMapping("/")
     public String inicio(Model model) {
 
-        var inicio = "Hello"; 
+        var inicio = "Hello";
         model.addAttribute("inicio", inicio);
 
         return "index";
 
     }
-    
+
     @GetMapping("/Ingresar Usuario")
-    public String ingresar(Usuario usuario){
-        
+    public String ingresar(Usuario usuario) {
+
         return "Ingresar_Usuario";
-        
+
     }
- 
+
+    @GetMapping("/Servicios")
+    public String servicio() {
+
+        return "Servicios";
+
+    }
+
 }

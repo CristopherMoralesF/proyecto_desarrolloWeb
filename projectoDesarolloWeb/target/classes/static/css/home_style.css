@@ -21,6 +21,8 @@ header img{
     text-align: center; 
     height: 800px; 
 }
+
+
 #Bienvenida img{
     width: 500px;
     padding: 25px
@@ -28,6 +30,8 @@ header img{
 #Bienvenida p{
     text-align: justify; 
 }
+
+
 
 /* --------> Menu Principal */
 /* Da color a la barra y asigna su prioridad a la hora de mostrar la misma. */
@@ -60,12 +64,29 @@ header img{
     color: white;
     padding: 8px 25px;
     transition: all .5s ease;
+    display:block;
+}
+.navbar ul > li  {
+    float:left;
 }
 /* Da el efecto cuando se pasa el mouse por encima de los items */
 .navbar ul li a:hover{
     background-color: white;
     color: black;
     box-shadow: 0 0 10px white;
+}
+
+
+
+.navbar li ul {
+    display:none;
+    position:absolute;
+    min_width:140px;
+}
+
+.navbar li:hover > ul{
+    display:block;
+    background-color: #47ACCD;
 }
 
 /* --------> Menu Index */
@@ -97,6 +118,36 @@ header img{
     background-color: #47ACCD;
     color: white;
     box-shadow: 0 0 10px #47ACCD;
+}
+.nav_index {
+    display: flex;
+    justify-content: center;
+    background-color: #92CEE1;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+.nav_index ul{
+    display: flex;
+    list-style-type: none;
+    margin:  20px 0px;
+}
+.nav_index ul li {
+    font-family: century;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+.nav_index ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 8px 25px;
+    transition: all .5s ease;
+}
+.nav_index ul li a:hover{
+    background-color: #47ACCD;
+    color: white;
+    box-shadow: 0 0 10px #47ACCD;
+
 }
 
 /* --------> Instalaciones */
@@ -194,21 +245,233 @@ table{
     border: none; 
     color: white; 
 }
+/* --------------- Servicios --------------- */
+/* --------> General  */
+#ServiciosOfrecidos h2{
+    padding-top: 20px;
+}
+#ServiciosOfrecidos table {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 150px;
+}
+#ServiciosOfrecidos table th{
+    width: 300px;
+}
+#ServiciosOfrecidos table td{
+    width: 800px;
+}
+#ServiciosOfrecidos table p{
+    text-align: justify
+}
+#ServiciosOfrecidos table h2{
+    text-align: center;
+}
+#ServiciosOfrecidos img {
+    width: 300px;
+    padding: 25px;
 
-/* --------------- Sección Mis Clientes --------------- */
-#misClientes h2{
+}
+
+/* --------> Coronas y puentes  */
+#Coronasypuentes {
+    background-color: #E7E7E7; 
+    height: 800px; 
+}
+
+#Coronasypuentes img{
+    width: 300px;
+    padding: 25px;
+}
+#Coronasypuentes h2{
+    text-align: center
+}
+#Coronasypuentes  p{
+    text-align: justify; 
+}
+
+/* --------> Implantes  */
+#Implantes {
     text-align: center; 
+    background-color: white; 
+    height: 800px; 
+}
+
+#Implantes img{
+    width: 300px;
+    padding: 25px;
+}
+#Implantes  p{
+    text-align: justify; 
+}
+
+/* --------> Periodoncia  */
+#Periodoncia{
+    text-align: center; 
+    background-color: #E7E7E7; 
+    height: 800px; 
+}
+
+#Periodoncia img{
+    width: 300px;
+    padding: 25px
+}
+#Periodoncia p{
+    text-align: justify; 
+}
+/* --------> CirugiaMaxilo  */
+#CirugíaMaxilofacial {
+    text-align: center; 
+    height: 800px; 
+}
+
+#CirugíaMaxilofacial img{
+    width: 300px;
+    padding: 25px
+}
+#CirugíaMaxilofacial p{
+    text-align: justify; 
+}
+/* --------> Endodoncia  */
+#Endodoncia {
+    text-align: center;
+    background-color: #E7E7E7; 
+    height: 800px; 
+}
+
+#Endodoncia  img{
+    width: 300px;
+    padding: 25px
+}
+#Endodoncia  p{
+    text-align: justify; 
+}
+/* --------> Odontopediatria  */
+#Odontopediatria {
+    text-align: center; 
+    height: 800px; 
+}
+
+#Odontopediatria  img{
+    width: 300px;
+    padding: 25px
+}
+#Odontopediatria  p{
+    text-align: justify; 
+}
+/* --------> Ortodoncia  */
+#Ortodoncia {
+    text-align: center; 
+    background-color: #E7E7E7; 
+    height: 800px; 
+}
+
+#Ortodoncia  img{
+    width: 300px;
+    padding: 25px
+}
+#Ortodoncia  p{
+    text-align: justify; 
+}
+
+/* --------> Odonto  */
+#OdontologiaGeneral{
+    text-align: center; 
+    height: 800px; 
+}
+
+#OdontologiaGeneral img{
+    width: 300px;
+    padding: 25px
+}
+#OdontologiaGeneral p{
+    text-align: justify; 
+}
+
+/* --------------- header & navbar --------------- */
+#misClientes h2{
+    text-align:center; 
 }
 #misClientes table{
-    margin-left: auto; 
-    margin-right: auto; 
+    margin-left: auto;
+    margin-right: auto;
     border: 1px; 
-    border-color: #47ACCD
+    border-color: #92CEE1;
+}
+
+#misClientes th{
+    padding: 15px;
+    background-color: #92CEE1;
 }
 #misClientes td{
-    padding: 20px; 
+    width: 250px;
+    padding: 15px; 
 }
-#misClientes th {
-    padding: 20px;
-    background-color: #47ACCD; 
-}   
+
+/*--------------- Pie de pagina --------------- */
+/*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');*/
+
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}

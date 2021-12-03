@@ -246,8 +246,35 @@ table{
     color: white; 
 }
 /* --------------- Servicios --------------- */
+/* --------> General  */
+#ServiciosOfrecidos h2{
+    padding-top: 20px;
+}
+#ServiciosOfrecidos table {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 150px;
+}
+#ServiciosOfrecidos table th{
+    width: 300px;
+}
+#ServiciosOfrecidos table td{
+    width: 800px;
+}
+#ServiciosOfrecidos table p{
+    text-align: justify
+}
+#ServiciosOfrecidos table h2{
+    text-align: center;
+}
+#ServiciosOfrecidos img {
+    width: 300px;
+    padding: 25px;
+
+}
+
+/* --------> Coronas y puentes  */
 #Coronasypuentes {
-    text-align: center; 
     background-color: #E7E7E7; 
     height: 800px; 
 }
@@ -255,28 +282,27 @@ table{
 #Coronasypuentes img{
     width: 300px;
     padding: 25px;
-
-
+}
+#Coronasypuentes h2{
+    text-align: center
 }
 #Coronasypuentes  p{
-    text-align: left; 
+    text-align: justify; 
 }
 
 /* --------> Implantes  */
 #Implantes {
     text-align: center; 
-    background-color: #E7E7E7; 
+    background-color: white; 
     height: 800px; 
 }
 
 #Implantes img{
     width: 300px;
     padding: 25px;
-
-
 }
 #Implantes  p{
-    text-align: left; 
+    text-align: justify; 
 }
 
 /* --------> Periodoncia  */
@@ -303,7 +329,7 @@ table{
     width: 300px;
     padding: 25px
 }
-#CirugíaMaxilofacialp{
+#CirugíaMaxilofacial p{
     text-align: justify; 
 }
 /* --------> Endodoncia  */
@@ -362,9 +388,29 @@ table{
     text-align: justify; 
 }
 
+/* --------------- header & navbar --------------- */
+#misClientes h2{
+    text-align:center; 
+}
+#misClientes table{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px; 
+    border-color: #92CEE1;
+}
+
+#misClientes th{
+    padding: 15px;
+    background-color: #92CEE1;
+}
+#misClientes td{
+    width: 250px;
+    padding: 15px; 
+}
+
+/*--------------- Pie de pagina --------------- */
 /*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');*/
 
-/*:::::Pie de Pagina*/
 .pie-pagina{
     width: 100%;
     background-color: #0a141d;
