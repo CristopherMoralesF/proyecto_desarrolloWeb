@@ -19,5 +19,13 @@ public class Usuario implements Serializable {
     private String edad;
     private String Correo;
     private String contraseña;
+    private String motivo_consulta; 
+    private String problemas_cardiacos; 
+    private String transtornos_sangrado; 
+    private String enfermedad_infecciosas; 
+    private String alergias; 
+    private String operaciones; 
+    private String transfusiones_transplantes; 
+    
 
 }

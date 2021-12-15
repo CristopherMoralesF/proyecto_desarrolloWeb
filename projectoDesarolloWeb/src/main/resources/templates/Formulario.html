@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns = "http://www.w3.org/1999/xhtml">
+    <head>
+        <title> Home </title>
+        <link rel="stylesheet" th:href="@{/css/home_style.css}"/>
+    </head>
+
+    <body>
+
+        <header>
+            <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
+
+            <nav class = "navbar">
+                <ul>
+                    <li> <a th:href="@{/}"> Sobre Nosotros </a> </li>
+                    <li> <a th:href="@{/Servicios/}"> Servicios </a> </li>
+                    <li> <a href="#home_admin"> Contactenos </a> </li>
+                    <li> <a th:href="@{/Ingresar Usuario/}"> Ingresar / Registrarse </a> </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <section id = "Formulario">
+
+
+            <h2> Formulario </h2>
+            <p> 
+                Por favor complete toda la información solicitada, en nuestra clinica nos preocupamos por la protección y privacidad de los datos de nuestros pacientes. Por ello, garantizamos la absoluta confidencialidad
+                de los datos que usted indicara en el formulario, siento estos utilizados solamente con fines médicos para mejorar nuestra atención para con usted. 
+            </p>
+
+            <form th:action="@{/Guardar Formulario}" th:object="${usuario}">
+
+                <h2> Información Paciente </h2>
+                <p>
+                    Por favor asegurese que toda la información se encuentra actualizada 
+                </p>
+                <br/>
+                <br/>
+                <input type="hidden" name="id" th:field="*{id_usuarios}"/>
+                <input type="hidden" name="correo" th:field="*{Correo}"/>
+                <input type="hidden" name="correo" th:field="*{contraseña}"/>
+
+                <table border="0">
+                    <tbody>
+                        <tr>
+                            <td> <label for="nombre"> Nombre: </label> </td>
+                            <td>  <input type="text" 
+                                         name="nombre" 
+                                         required="true"
+                                         placeholder="Por favor ingrese su nombre"
+                                         th:field="*{nombre}"
+                                         />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="apellidos"> Apellidos: </label></td>
+                            <td>                 <input type="text" 
+                                                        name="apellidos" 
+                                                        required="true"
+                                                        placeholder="Por favor ingrese sus apellidos"
+                                                        th:field="*{apellidos}"
+                                                        />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="edad"> Edad: </label> </td>
+                            <td> <input type="text" 
+                                        name="edad" 
+                                        required="true"
+                                        placeholder="Por favor ingrese su edad"
+                                        th:field="*{edad}"
+                                        />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="motivoConsulta"> Motivo de consulta: </label> </td>
+                            <td>  <input type="text" 
+                                         name="motivoConsulta" 
+                                         required="true"
+                                         style="height: 150px"
+                                         placeholder="Indique el motivo principal de su consulta"
+                                         th:field="*{motivo_consulta}"
+                                         />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+                <h2> Datos Médicos </h2>
+                <p>
+                    Por favor marque las opciones que correspondan a su estado actual de salud o hechos anteriores. 
+                </p>
+                <br/>
+                <br/>
+
+                <table border="0">
+                    <tbody>
+                        <tr>
+                            <td> <label for="problemasCartiacos"> Problemas Cardíacos: </label></td>
+                            <td><select id="problemasCartiacos" name="problemasCartiacos" th:field="*{problemas_cardiacos}">
+                                    <option value="Sí"> Sí </option>
+                                    <option value="No"> No </option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="transtornosSangrado"> Transtornos de Sangrado: </label></td>
+                            <td> <select id="transtornosSangrado" name="transtornosSangrado" th:field="*{transtornos_sangrado}"> 
+                                    <option value="Sí"> Sí </option>
+                                    <option value="No"> No </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="enfermedadesInfecciosas"> Enfermedades Infecciosas: </label></td>
+                            <td> <select id="enfermedadesInfecciosas" name="enfermedadesInfecciosas" th:field="*{enfermedad_infecciosas}">
+                                    <option value="Sí"> Sí </option>
+                                    <option value="No"> No </option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td><label for="alergias"> Alergias: </label></td>
+                            <td> <select id="alergias" name="alergias" th:field="*{alergias}">
+                                    <option value="Sí"> Sí </option>
+                                    <option value="No"> No </option>
+                                </select> </td>
+                        </tr>
+                        <tr>
+                            <td><label for="alergias"> Operaciones: </label></td>
+                            <td>        <select id="operaciones" name="operaciones" th:field="*{operaciones}">
+                                    <option value="Sí"> Sí </option>
+                                    <option value="No"> No </option>
+                                </select>   
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="transfucionesTransplantes"> Transfusiones o Transplantes: </label></td>
+                            <td>  <select id="transfucionesTransplantes" name="transfucionesTransplantes" th:field="*{transfusiones_transplantes}">
+                                    <option value="Sí"> Sí </option>
+                                    <option value="No"> No </option>
+                                </select>   </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br/>
+
+                <input class="IngresarUsuario" type="submit" value="Guardar Informacion" name="guardar"/>
+            </form>
+
+        </section>
+
+    </body>
+</html>

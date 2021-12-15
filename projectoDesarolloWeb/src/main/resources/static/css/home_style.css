@@ -388,7 +388,7 @@ table{
     text-align: justify; 
 }
 
-/* --------------- header & navbar --------------- */
+/* --------------- Reporte mis clientes --------------- */
 #misClientes h2{
     text-align:center; 
 }
@@ -407,6 +407,63 @@ table{
     width: 250px;
     padding: 15px; 
 }
+#misClientes a {
+    text-decoration: none; 
+    background-color: #47ACCD; 
+    color:white; 
+    padding: 8px 25px;
+    transition: all .5s ease; 
+
+}
+#misClientes a:hover{
+    background-color: white; 
+    color: black; 
+    box-shadow: 0 0 10px white; 
+}
+
+/* --------------- Formulario Clientes --------------- */
+#Formulario {
+    position: relative; 
+    margin: 100px; 
+    text-align: justify;
+}
+
+#Formulario h2{
+    text-align: center;
+}
+
+#Formulario form {
+    text-align: center;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto; 
+
+}
+#Formulario table{
+    text-align: left;
+    margin: auto; 
+}
+#Formulario form input {
+    width: 350px;
+    height: 35px;
+    margin: 15px
+}
+#Formulario label{
+    padding-right: 100px; 
+    text-align: left; 
+}
+#Formulario form select{
+    width: 100px;
+    height: 35px; 
+    margin: 15px; 
+}
+
+.IngresarUsuario{
+    background-color: #47ACCD;
+    border: none; 
+    color: white; 
+}
+
 
 /*--------------- Pie de pagina --------------- */
 /*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');*/
