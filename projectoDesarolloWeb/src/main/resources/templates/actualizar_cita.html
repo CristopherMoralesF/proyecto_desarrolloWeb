@@ -6,20 +6,20 @@
         <meta charset="UTF-8"/>
     </head>
     <body>
-        <header>
+         <header>
             <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
 
-            <nav class = "navbar">
+              <nav class = "navbar">
                 <ul>
                     <li> <a th:href="@{/}"> Sobre Nosotros </a> </li>
-                    <li> <a href="#home_admin"> Servicios </a> </li>
-                    <li> <a href="#home_admin"> Contactenos </a> </li>
-                    <li> <a href="Ingresar_Usuario.html"> Ingresar / Registrarse </a> </li>
+                    <li> <a th:href="@{/Servicios/}"> Servicios </a> </li>
+                    <li> <a th:href="@{/Contacto/}"> Contactenos </a> </li>
+                    <li> <a th:href="@{/Ingresar Usuario/}"> Ingresar / Registrarse </a> </li>
                 </ul>
             </nav>
 
         </header>
-            <section id = "actualizarInicio">
+            <section id = "InicioSesion">
         <h2>[[#{cita.datos}]]</h2>
         <hr/>
         <a th:href="@{/}">[[#{accion.regresar}]]</a>
