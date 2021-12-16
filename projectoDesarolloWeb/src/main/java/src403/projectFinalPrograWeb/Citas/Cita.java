@@ -16,7 +16,7 @@ import lombok.Data;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_citas;
-    private Long id_Usuario;
+    private int id_Usuario;
     private String fecha;
     private String hora;
     private String tratamiento;

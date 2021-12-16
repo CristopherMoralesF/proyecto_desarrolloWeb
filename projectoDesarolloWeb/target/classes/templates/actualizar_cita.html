@@ -20,33 +20,33 @@
 
         </header>
             <section id = "InicioSesion">
-        <h2>[[#{cita.datos}]]</h2>
-        <hr/>
-        <a th:href="@{/}">[[#{accion.regresar}]]</a>
+        <h2>Citas </h2>
+         <p> Por favor ingrese la información solicitada </p>
+        <a th:href="@{/Cita_Usuario}">Regresar las citas</a>
         <br/>
-        <form th:action="@{/guardar}" 
+        <form th:action="@{/Guardar Cita}" 
               th:object="${cita}">
             <input type="hidden" name="id" th:field="*{id}"/>
-            <label for="Fecha">[[#{cita.fecha}]]:</label>
+            <label for="Fecha">Fecha de la cita:</label>
             <input type="date" 
                    required="true" 
                    name="trip-start" 
                    th:field="*{fecha}"/>
             <br/>
-            <label for="Hora">[[#{cita.hora}]]:</label>
+            <label for="Hora">Hora:</label>
             <input type="time" 
                    required="true" 
                    name="Hora" 
                    th:field="*{hora}"/>
             <br/>
-            <label for="tratamiento">[[#{cita.tratamiento}]]:</label>
+            <label for="tratamiento">Tratamiento:</label>
             <input type="text" 
                    required="true" 
                    name="tratamiento" 
                    th:field="*{tratamiento}"/>
             <br/>
            
-            <input type="submit" th:value="#{accion.guardar}" name="guardar"/>
+            <input class="IngresarUsuario" type="submit" value="Crear Usuario" name="guardar"/>
         </form>
             </section>
     </body>

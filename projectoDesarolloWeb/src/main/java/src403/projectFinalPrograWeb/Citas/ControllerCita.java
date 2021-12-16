@@ -7,28 +7,39 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-
 @Controller
 @Slf4j
 public class ControllerCita {
+    
+    
+     @Autowired   
+private CitaService citaService;
 
-    @Autowired
-    private CitaService citaService;
+    @GetMapping("/Crear Cita")
+    public String crearUsuario(Cita cita) {
 
-    @GetMapping("/Agregar Citas")
-    public String ingresar(Cita cita) {
-        return "Cita_Usuario";
-    }
-
-    @GetMapping("/agregar")
-    public String agregar(Cita cita) {
         return "actualizar_cita";
+
     }
 
-    @GetMapping("/guardar")
+    @GetMapping("/Guardar Cita")
     public String guardar(Cita cita) {
+
         citaService.guardar(cita);
         return "redirect:/";
+
+    }
+
+    
+    @GetMapping("/Las Citas")
+    public String listaClientes(Model model){
+        
+        var citas = citaService.getCitas();
+        
+        model.addAttribute("citas",citas);
+        
+        return "Cita_Usuario";
+        
     }
 
     @GetMapping("/editar/{id_citas}")

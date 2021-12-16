@@ -23,33 +23,32 @@
         </header>
 
    
-        <section id = "InicioSesion">
+        <section id = "misClientes">
        
-        <a th:href="@{/agregar}">[[#{cita.crear}]]</a>
+        <a th:href="@{/Crear Cita}">Crear Citas</a>
         <div th:if="${citas !=null and !cita.empty}">
             <table border="1">
                 <tr>
-                    <th>[[#{cita.id_citas}]]</th>
-                    <th>[[#{cita.id_Usuario}]]</th>
-                    <th>[[#{cita.fecha}]]</th>
-                    <th>[[#{cita.hora}]]</th>
-                    <th>[[#{cita.tratamiento}]]</th>
-                    <th>[[#{accion.eliminar}]]</th>
-                    <th>[[#{accion.editar}]]</th>
+                    <th>ID de la cita</th>
+                    <th>ID del Usuario</th>
+                    <th>Fecha de la cita</th>
+                    <th>Hora de cita</th>
+                    <th>Tratamiento</th>
+                   
                 </tr>
                 <tr th:each="cita : ${citas}">
                     <td th:text="${cita.id_citas}"/>
                     <td th:text="${cita.id_Usuario}"/>
                     <td th:text="${cita.fecha}"/>
                     <td th:text="${cita.hora}"/>
-                    <td th:text="${persona.tratamiento}"/>
-                    <td><a th:href="@{/eliminar/} + ${cita.id_cita}" th:text="#{accion.eliminar}"/></td>
-                    <td><a th:href="@{/editar/} + ${cita.id_cita}" th:text="#{accion.editar}"/></td>
+                    <td th:text="${cita.tratamiento}"/>
+                    <td><a th:href="@{/eliminar/} + ${cita.id_cita}"/>Eliminar</td>
+                    <td><a th:href="@{/editar/} + ${cita.id_cita}" />Editar</td>
                 </tr>
             </table>
         </div>
         <div th:if="${cita == null or citas.empty}">
-            [[#{lista.citas.vacia}]]
+            <p>No tiene lista registrados</p>
         </div>
         
         

@@ -10,7 +10,9 @@
                     <meta name="keywords" content="dentista,cita,administracion">
                         <link rel="stylesheet" href="" th:href="@{/css/home_style.css}"/>
 
-                        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+                        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous">
+                                
+                        </script>
                         </head>
 
                         <body>
@@ -23,67 +25,57 @@
                             </header>
 
 
-                            <section>
-                                <table border="0">
-                                    <thead>
-                                        <tr>
 
-                                            <h2>Contactenos</h2>
+                            <section id="contacto">
+                                <h2>Contactenos</h2>
+                            </section>
+                            
 
+                            <form id="formulario_contacto" action="#" target="" method="get" name="formDatosPersonales">
+                                 <label for="apellidos">Nombre</label>
+                                <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
 
+                                <label for="apellidos">Apellido</label>
+                                <input type="text" name="apellido" id="apellidos" placeholder="Apellido"/>
 
-                                            <div class="container">
-                                                <form>
-                                                    <label for="fname">Nombre</label>
-                                                    <input type="text" id="fname" name="firstname" placeholder="Nombre">
+                                <label for="email" />Email</label>
+                                <input type="email" name="email" id="email" placeholder="email" required />
 
-                                                        <label for="lname">Telefeno</label>
-                                                        <input type="tel" id="fname" name="telefono" placeholder="Telefono">
-
-                                                            <label for="lname">Correo</label>
-                                                            <input type="email" id="fname" name="email" placeholder="Correo">
-
-
-                                                                <input type="submit" value="Enviar">
-                                                                    </form>
-                                                                    </div>
-
-                                                                    </tr>
-                                                                    </thead>
-
-                                                                    </table>
-
-                                                                    </section>
+                                <label for="asunto">Asunto</label>
+                                <input type ="text" name="asunto" id="asunto" placeholder="la consulta"/>
+                                <input type="submit" name="enviar" value="Enviar datos" id="enviar"/>
+                            </form>
+                            <br><!-- comment -->
+                                <br>
 
 
+                            <footer class="pie-pagina">
+                                <div class="grupo-1">
+                                    <div class="box">
+                                        <figure>
+                                            <a href="#">
+                                                <img src="" th:src="@{/image/Logo.jpg}" alt="logo pagina">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="box">
+                                        <h2>SOBRE NOSOTROS</h2>
+                                        <p>La Dra. María Jesús Vargas Víquez es graduada de la Universidad Latinoamericana de Ciencia y Tecnología (ULACIT).</p>
+                                        <p>“Mi misión es dar mi mejor trabajo y amor a mis pacientes"</p>
+                                    </div>
+                                    <div class="box">
+                                        <h2>SIGUENOS</h2>
+                                        <div class="red-social">
+                                            <a href="https://www.facebook.com/Dra-Maria-Vargas-Viquez-664610657264413/" class="fa fa-facebook"></a>
+                                            <a href="https://instagram.com/dramariavargasviquez?utm_medium=copy_link" class="fa fa-instagram"></a>
 
-                                                                    <footer class="pie-pagina">
-                                                                        <div class="grupo-1">
-                                                                            <div class="box">
-                                                                                <figure>
-                                                                                    <a href="#">
-                                                                                        <img src="" th:src="@{/image/Logo.jpg}" alt="logo pagina">
-                                                                                    </a>
-                                                                                </figure>
-                                                                            </div>
-                                                                            <div class="box">
-                                                                                <h2>SOBRE NOSOTROS</h2>
-                                                                                <p>La Dra. María Jesús Vargas Víquez es graduada de la Universidad Latinoamericana de Ciencia y Tecnología (ULACIT).</p>
-                                                                                <p>“Mi misión es dar mi mejor trabajo y amor a mis pacientes"</p>
-                                                                            </div>
-                                                                            <div class="box">
-                                                                                <h2>SIGUENOS</h2>
-                                                                                <div class="red-social">
-                                                                                    <a href="https://www.facebook.com/Dra-Maria-Vargas-Viquez-664610657264413/" class="fa fa-facebook"></a>
-                                                                                    <a href="https://instagram.com/dramariavargasviquez?utm_medium=copy_link" class="fa fa-instagram"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grupo-2">
+                                    <small>&copy; 2021 <b> </b> - Todos los Derechos Reservados.</small>
+                                </div>
+                            </footer>
 
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="grupo-2">
-                                                                            <small>&copy; 2021 <b> </b> - Todos los Derechos Reservados.</small>
-                                                                        </div>
-                                                                    </footer>
-
-                                                                    </body>
-                                                                    </html>
+                        </body>
+                        </html>
