@@ -65,4 +65,24 @@ public class UsuarioService {
 
     }
 
+    public Usuario encuentraUsuario(String nombreUsuario) {
+
+        Usuario usuarioEncontrado = null;
+        List<Usuario> misUsuarios = getUsuarios();
+
+        for (Usuario miUsuario : misUsuarios) {
+
+            if (miUsuario.getCorreo().equalsIgnoreCase(nombreUsuario)) {
+
+                usuarioEncontrado = miUsuario;
+                break;
+
+            }
+
+        }
+
+        return usuarioEncontrado;
+
+    }
+
 }

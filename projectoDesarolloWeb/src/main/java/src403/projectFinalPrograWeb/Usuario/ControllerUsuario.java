@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -37,15 +38,40 @@ public class ControllerUsuario {
 
         if (usuarioService.validaUsuario(usuario)) {
 
-            return "redirect:/";
+            usuario = usuarioService.encuentraUsuario(usuario.getCorreo());
+            model.addAttribute("usuario", usuario);
+            return "Pantalla_Principal";
 
         } else {
 
+            usuario = null;
             var validacion = false;
+            model.addAttribute("usuario", usuario);
             model.addAttribute("validacion", validacion);
             return "Ingresar_Usuario";
 
         }
+
+    }
+
+    @GetMapping("/Inicio/{id}")
+    public String Inicio(@PathVariable("id") Long id, Model model) {
+
+        if (id > 0) {
+
+            Usuario usuario = new Usuario();
+            usuario.setId_usuarios(id);
+            usuario = usuarioService.getUsuario(usuario);
+            model.addAttribute("usuario", usuario);
+
+        } else {
+
+            Usuario usuario = null;
+            model.addAttribute("usuario", usuario);
+
+        }
+        
+        return "Pantalla_Principal";
 
     }
 
@@ -75,26 +101,6 @@ public class ControllerUsuario {
 
         usuarioService.guardar(usuario);
         return "redirect:/Mis Clientes";
-
-    }
-
-    @RequestMapping(value = "user", method = RequestMethod.GET)
-    public String user(Model model, Usuario usuario) {
-        model.addAttribute("user", usuario);
-        return "user/info";
-    }
-
-//    @RequestMapping(value = "user", method = RequestMethod.GET)
-//    public ModelAndView user(Usuario user) {
-//        ModelAndView mav = new ModelAndView("user/info");
-//        mav.addObject("user", user);
-//        return mav;
-//    }
-
-    @ModelAttribute("user")
-    public Usuario setUser(Usuario user) {
-
-        return user; 
 
     }
 

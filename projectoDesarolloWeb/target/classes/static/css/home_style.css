@@ -43,6 +43,11 @@ header img{
     top: 0; 
     z-index: 1000; 
 }
+.navbar div {
+    display: flex;
+    justify-content: space-between; 
+    
+}
 
 /* Acomoda los items para que salgan uno a la par del otro */
 .navbar ul{

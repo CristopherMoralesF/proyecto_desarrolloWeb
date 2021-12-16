@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th=xmlns:th="http://www.thymeleaf.org" 
+      xmlns = "http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title> Home </title>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="description" content="this is the main screen for the administrator">
+                    <meta name="keywords" content="dentista,cita,administracion">
+                        <link rel="stylesheet" href="" th:href="@{/css/home_style.css}"/>
+                        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+                        </head>
+
+                        <body>
+
+
+
+                            <nav class = "navbar" th:fragment="navBar">
+
+                                <div th:if="${usuario !=null}">
+
+                                    <ul>
+                                        <li> <a th:href="@{/Inicio/} + ${usuario.id_usuarios}"> Sobre Nosotros </a> </li>
+                                        <li> <a th:href="@{/Servicios/} + ${usuario.id_usuarios}"> Servicios </a> </li>
+                                        <li> <a th:href="@{/Contacto/} + ${usuario.id_usuarios}"> Contactenos </a> </li>
+
+
+                                        <div th:switch="${usuario.Correo}">
+
+                                            <div th:case="'admin@admin.com'">
+
+                                                <li> <a th:href="@{/Mis Clientes/}"> Mis Clientes </a> </li>
+                                                <li> <a th:href="@{/}"> Cerrar Sesión </a> </li>
+
+                                            </div>
+
+                                            <div th:case="*">
+
+                                                <li> <a href="#home_admin"> Mis Citas </a> </li>
+                                                <li> <a th:href="@{/Formulario/} + ${usuario.id_usuarios}"> Información Usuario </a> </li>
+                                                <li> <a th:href="@{/}"> Cerrar Sesión </a> </li>
+
+                                            </div>
+
+                                        </div>
+                                        
+                                        
+
+                                    </ul>
+                                </div>
+
+                                <div th:if="${usuario ==null}">
+                                    <ul>
+                                        <li> <a th:href="@{/}"> Sobre Nosotros </a> </li>
+                                        <li> <a th:href="@{/Servicios/0}"> Servicios </a> </li>
+                                        <li> <a th:href="@{/Contacto/0}"> Contactenos </a> </li>
+                                        <li> <a th:href="@{/Ingresar Usuario/}"> Ingresar / Registrarse </a> </li>
+                                    </ul>
+                                </div>
+                            </nav>
+
+
+                        </body>
+
+
+                        </html>

@@ -1,285 +1,278 @@
 <!DOCTYPE html>
 <html xmlns:th=xmlns:th="http://www.thymeleaf.org" 
       xmlns = "http://www.w3.org/1999/xhtml">
-    
+
     <head>
         <title> Home </title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="this is the main screen for the administrator">
-        <meta name="keywords" content="dentista,cita,administracion">
-        <link rel="stylesheet" href="" th:href="@{/css/home_style.css}"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="description" content="this is the main screen for the administrator">
+                    <meta name="keywords" content="dentista,cita,administracion">
+                        <link rel="stylesheet" href="" th:href="@{/css/home_style.css}"/>
 
-        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
-    </head>
+                        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+                        </head>
 
-    <body>
-
-        <header>
-            <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
+                        <body>
 
-            <nav class = "navbar">
-                <ul>
-                    <li> <a th:href="@{/}"> Sobre Nosotros </a> </li>
-                    <li> <a href="@{/Servicios}"> Servicios </a> </li>
-                   <li> <a th:href="@{/Contacto/}"> Contactenos </a> </li>
-                    <li> <a th:href="@{/Ingresar Usuario/}"> Ingresar / Registrarse </a> </li>
-                </ul>
-            </nav>
+                            <header>
+                                <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
 
-        </header>
+                                <nav th:replace="layout/navigationBar :: navBar"> </nav>
 
-        <nav class = "nav_index">
-            <ul>
-                <li> <a href="#OdontologiaGeneral"> Odontología General  </a> </li>
-                <li> <a href="#Coronasypuentes"> Coronas y puentes </a> </li>
-                <li> <a href="#Implantes"> Implantes </a> </li>
-                <li> <a href="#Periodoncia"> Periodoncia </a> </li>
-                <li> <a href="#CirugíaMaxilofacial "> Cirugía Maxilofacial 
-                    </a> </li>
-                <li> <a href="#Endodoncia"> Endodoncia  </a> </li>
-                <li> <a href="#Odontopediatria"> Odontopediatria </a> </li>
-                <li> <a href="#Ortodoncia"> Ortodoncia </a> </li>
-            </ul>
-        </nav>
-        
-        <section id = "ServiciosOfrecidos">
-            
-            <section id = "OdontologiaGeneral">
+                            </header>
 
-                <header>
-                    <h2> Servicios que ofrecemos </h2>    
-                </header>
+                            <nav class = "nav_index">
+                                <ul>
+                                    <li> <a href="#OdontologiaGeneral"> Odontología General  </a> </li>
+                                    <li> <a href="#Coronasypuentes"> Coronas y puentes </a> </li>
+                                    <li> <a href="#Implantes"> Implantes </a> </li>
+                                    <li> <a href="#Periodoncia"> Periodoncia </a> </li>
+                                    <li> <a href="#CirugíaMaxilofacial "> Cirugía Maxilofacial 
+                                        </a> </li>
+                                    <li> <a href="#Endodoncia"> Endodoncia  </a> </li>
+                                    <li> <a href="#Odontopediatria"> Odontopediatria </a> </li>
+                                    <li> <a href="#Ortodoncia"> Ortodoncia </a> </li>
+                                </ul>
+                            </nav>
 
+                            <section id = "ServiciosOfrecidos">
 
-                <table border="0">
-                    <thead>
-                        <tr>
-                            <th> <img src="" th:src="@{/image/odontogeneral.png}" alt=""/></th>
+                                <section id = "OdontologiaGeneral">
 
-                            <td>
-                                 
-                                <h2>Odontología General</h2>
-                                <p>
-                                La Odontología General (Operatoria o Restauradora) es la encargada de solucionar los problemas primarios que tienen que ver con la boca, dientes y otras estructuras relacionadas. Representa en la mayoría de los casos el contacto inicial del paciente con el profesional de la Odontología.
+                                    <header>
+                                        <h2> Servicios que ofrecemos </h2>    
+                                    </header>
 
-                                <br>En nuestro sistema, el odontólogo general realiza el diagnóstico primario del paciente, resuelve los problemas de restauración de caries que pueda presentar y lo canaliza adecuadamente a cada especialista de acuerdo a la necesidad del paciente.
-                                </p>
-                            </td>
-                        </tr>
-                    </thead>
 
-                </table>
+                                    <table border="0">
+                                        <thead>
+                                            <tr>
+                                                <th> <img src="" th:src="@{/image/odontogeneral.png}" alt=""/></th>
 
-            </section>
+                                                <td>
 
-            <section id = "Coronasypuentes">
+                                                    <h2>Odontología General</h2>
+                                                    <p>
+                                                        La Odontología General (Operatoria o Restauradora) es la encargada de solucionar los problemas primarios que tienen que ver con la boca, dientes y otras estructuras relacionadas. Representa en la mayoría de los casos el contacto inicial del paciente con el profesional de la Odontología.
 
+                                                        <br>En nuestro sistema, el odontólogo general realiza el diagnóstico primario del paciente, resuelve los problemas de restauración de caries que pueda presentar y lo canaliza adecuadamente a cada especialista de acuerdo a la necesidad del paciente.
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </thead>
 
+                                    </table>
 
-                <table border="0">
-                    <thead>
-                        <tr>
+                                </section>
 
-                            <td>
-                                
-                                <h2>Coronas y Puentes </h2>
+                                <section id = "Coronasypuentes">
 
-                                <p> 
-                                Las coronas y la mayoría de los puentes son prótesis que se colocan de manera fija.<br> A diferencia de las prótesis removibles, que se pueden remover y limpiar diariamente,las coronas y los puentes fijos se cementan sobre los dientes o implantes existentes, y sólo un dentista puede extraerlos.    
-                                </p>
 
-                            </td>
-                            <th> <img src="" th:src="@{/image/crown and bridge.png}" alt=""/></th>
-                        </tr>
-                    </thead>
 
-                </table>
+                                    <table border="0">
+                                        <thead>
+                                            <tr>
 
-            </section>
+                                                <td>
 
+                                                    <h2>Coronas y Puentes </h2>
 
-            <section id = "Implantes">
+                                                    <p> 
+                                                        Las coronas y la mayoría de los puentes son prótesis que se colocan de manera fija.<br> A diferencia de las prótesis removibles, que se pueden remover y limpiar diariamente,las coronas y los puentes fijos se cementan sobre los dientes o implantes existentes, y sólo un dentista puede extraerlos.    
+                                                    </p>
 
+                                                </td>
+                                                <th> <img src="" th:src="@{/image/crown and bridge.png}" alt=""/></th>
+                                            </tr>
+                                        </thead>
 
-                <table border="0">
-                    <thead>
-                        <tr>
-                            <th> <img src="" th:src="@{/image/implant.png}" alt=""/></th>
-                            <td>
-                                
-                                <h2>Implantes </h2>
+                                    </table>
 
-                                <p> 
-                                Los implantes dentales son una solución para reponer dientes perdidos. Un implante es un tornillo de titanio que se introduce en el hueso maxilar, sobre el cual se colocarán posteriormente coronas o prótesis que sustituyen en aspecto y funcionalidad al diente perdido.     
-                                </p>
-                            </td>
-                        </tr>
-                    </thead>
+                                </section>
 
-                </table>
 
-            </section>
+                                <section id = "Implantes">
 
-            <section id = "Periodoncia">
 
+                                    <table border="0">
+                                        <thead>
+                                            <tr>
+                                                <th> <img src="" th:src="@{/image/implant.png}" alt=""/></th>
+                                                <td>
 
+                                                    <h2>Implantes </h2>
 
-                <table border="0">
-                    <thead>
-                        <tr>
+                                                    <p> 
+                                                        Los implantes dentales son una solución para reponer dientes perdidos. Un implante es un tornillo de titanio que se introduce en el hueso maxilar, sobre el cual se colocarán posteriormente coronas o prótesis que sustituyen en aspecto y funcionalidad al diente perdido.     
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </thead>
 
-                            <td>
-                                
-                                <h2>Periodoncia</h2>
-                                
-                                <p> 
-                                La periodoncia es la rama de la odontología que se ocupa de las enfermedades que afectan a las estructuras de soporte de los dientes. Estas incluyen las encías, el periodonto, que es el conjunto de tejidos que soportan el diente, y el hueso alveolar, que es el que aloja y sostiene los dientes en los alveolos.
+                                    </table>
 
-                                <br>Los tratamientos periodontales se realizan para prevenir o curar la retracción de las encías, la pérdida de hueso y evitar la caída de los dientes. También sirven para eliminar el sarro dental y evitar el sangrado de las encías.
-                                </p>
-                            </td>
-                            <th> <img src="" th:src="@{/image/periodoncia.png}" alt=""/></th>
-                        </tr>
-                    </thead>
+                                </section>
 
-                </table>
+                                <section id = "Periodoncia">
 
-            </section>
 
-            <section id = "CirugíaMaxilofacial">
 
+                                    <table border="0">
+                                        <thead>
+                                            <tr>
 
+                                                <td>
 
-                <table border="0">
-                    <thead>
-                        <tr>
-                            <th> <img src="" th:src="@{/image/maxilo.png}" alt=""/></th>
-                            <td>
-                                
-                                <h2>Cirugía Maxilofacial </h2>
-                                <p> 
-                                La cirugía maxilofacial es la especialidad médico-quirúrgica que se centra en el estudio, diagnóstico, tratamiento y rehabilitación de las enfermedades congénitas o adquiridas de la cavidad oral, el esqueleto facial y las estructuras cervicales relacionadas.
+                                                    <h2>Periodoncia</h2>
 
-                                <br>El cirujano maxilofacial cuenta con amplios conocimientos en cirugía oral y maxilofacial que le permiten realizar extracciones complicadas, injertos óseos e implantes dentales, entre muchos otros tratamientos. 
-                                </p>
-                            </td>
-                        </tr>
-                    </thead>
+                                                    <p> 
+                                                        La periodoncia es la rama de la odontología que se ocupa de las enfermedades que afectan a las estructuras de soporte de los dientes. Estas incluyen las encías, el periodonto, que es el conjunto de tejidos que soportan el diente, y el hueso alveolar, que es el que aloja y sostiene los dientes en los alveolos.
 
-                </table>
+                                                        <br>Los tratamientos periodontales se realizan para prevenir o curar la retracción de las encías, la pérdida de hueso y evitar la caída de los dientes. También sirven para eliminar el sarro dental y evitar el sangrado de las encías.
+                                                    </p>
+                                                </td>
+                                                <th> <img src="" th:src="@{/image/periodoncia.png}" alt=""/></th>
+                                            </tr>
+                                        </thead>
 
-            </section>
-
-
-
-        <section id = "Endodoncia">
-
-
-
-            <table border="0">
-                <thead>
-                    <tr>
-                        <td>
-                            
-                            <h2> Endodoncia </h2>
-
-                            <p>
-                            La endodoncia es un tratamiento para dientes infectados o descompuestos gravemente cuya causa parte del nervio del diente. 
-                            <br>
-                            El tratamiento consiste en reparar y salvar los dientes eliminando la pulpa dental, para después limpiar y sellar el interior del diente. La pulpa dental es el tejido del interior del diente que contiene vasos sanguíneos, nervios y tejido conectivo.  
-                            </p>
-                       
-                        </td>
-                        <th> <img src="" th:src="@{/image/endodoncia.png}" alt=""/> </th>
-                    </tr>
-                </thead>
-
-            </table>
-
-        </section>
-
-        <section id = "Odontopediatria">
-            
-            <table border="0">
-                <thead>
-                    <tr>
-                        <th> <img src="" th:src="@{/image/odontopediatria.png}" alt=""/></th>
-                        <td>
-                             
-                            <h2>Odontopediatria </h2>
-                            
-                            <p>
-
-                            La odontopediatría es la rama de la odontología que se encarga del diagnóstico y tratamiento de las enfermedades dentales infantiles desde la temprana infancia hasta la entrada en la pubertad.
-
-                            <br>El objetivo de los tratamientos de odontopediatría es acompañar el crecimiento y desarrollo de una correcta dentición para detectar y evitar problemas bucodentales severos en la edad adulta. En esta edad es muy importante incorporar buenos hábitos de salud e higiene dental, así como dar respuesta inmediata a problemas que puedan aparecer, en muchos casos sobre la dentición temporal, o dientes de leche.   
-                            </p>
-                        </td>
-                    </tr>
-                </thead>
-
-            </table>
-            
-        </section>
-
-
-        <section id = "Ortodoncia">
-
-
-            <table border="0">
-                <thead>
-                    <tr>
-
-                        <td>
-                            
-                            <h2>Ortodoncia </h2>
-
-                            <p> 
-                                
-                            La ortodoncia es una rama de la odontología que estudia, previene y corrige problemas dentales como desviación en la posición de los dientes, apiñamientos o diastemas (espacios entre los dientes), la forma de las arcadas dentales o problemas de mordida, para restablecer el equilibrio entre la forma y función de la boca mejorando también la estética facial.     
-
-                            Además, la ortodoncia se enfrenta a problemas mayores como la corrección de alteraciones en la mandíbula, el maxilar superior o incluso la cara y especialmente trastornos funcionales de la masticación.    
-                            </p>
-                        </td>
-                        
-                        <th> <img src="" th:src="@{/image/braces.png}" alt=""/></th>
-                    </tr>
-                </thead>
-
-            </table>
-
-        </section>
-        
-    </section>
-
-    <footer class="pie-pagina">
-        <div class="grupo-1">
-            <div class="box">
-                <figure>
-                    <a href="#">
-                        <img src="" th:src="@{/image/Logo.jpg}" alt="logo pagina">
-                    </a>
-                </figure>
-            </div>
-            <div class="box">
-                <h2>SOBRE NOSOTROS</h2>
-                <p>La Dra. María Jesús Vargas Víquez es graduada de la Universidad Latinoamericana de Ciencia y Tecnología (ULACIT).</p>
-                <p>“Mi misión es dar mi mejor trabajo y amor a mis pacientes"</p>
-            </div>
-            <div class="box">
-                <h2>SIGUENOS</h2>
-                <div class="red-social">
-                    <a href="https://www.facebook.com/Dra-Maria-Vargas-Viquez-664610657264413/" class="fa fa-facebook"></a>
-                    <a href="https://instagram.com/dramariavargasviquez?utm_medium=copy_link" class="fa fa-instagram"></a>
-
-                </div>
-            </div>
-        </div>
-        <div class="grupo-2">
-            <small>&copy; 2021 <b> </b> - Todos los Derechos Reservados.</small>
-        </div>
-    </footer>
-
-</body>
-</html>
+                                    </table>
+
+                                </section>
+
+                                <section id = "CirugíaMaxilofacial">
+
+
+
+                                    <table border="0">
+                                        <thead>
+                                            <tr>
+                                                <th> <img src="" th:src="@{/image/maxilo.png}" alt=""/></th>
+                                                <td>
+
+                                                    <h2>Cirugía Maxilofacial </h2>
+                                                    <p> 
+                                                        La cirugía maxilofacial es la especialidad médico-quirúrgica que se centra en el estudio, diagnóstico, tratamiento y rehabilitación de las enfermedades congénitas o adquiridas de la cavidad oral, el esqueleto facial y las estructuras cervicales relacionadas.
+
+                                                        <br>El cirujano maxilofacial cuenta con amplios conocimientos en cirugía oral y maxilofacial que le permiten realizar extracciones complicadas, injertos óseos e implantes dentales, entre muchos otros tratamientos. 
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </thead>
+
+                                    </table>
+
+                                </section>
+
+
+
+                                <section id = "Endodoncia">
+
+
+
+                                    <table border="0">
+                                        <thead>
+                                            <tr>
+                                                <td>
+
+                                                    <h2> Endodoncia </h2>
+
+                                                    <p>
+                                                        La endodoncia es un tratamiento para dientes infectados o descompuestos gravemente cuya causa parte del nervio del diente. 
+                                                        <br>
+                                                            El tratamiento consiste en reparar y salvar los dientes eliminando la pulpa dental, para después limpiar y sellar el interior del diente. La pulpa dental es el tejido del interior del diente que contiene vasos sanguíneos, nervios y tejido conectivo.  
+                                                    </p>
+
+                                                </td>
+                                                <th> <img src="" th:src="@{/image/endodoncia.png}" alt=""/> </th>
+                                            </tr>
+                                        </thead>
+
+                                    </table>
+
+                                </section>
+
+                                <section id = "Odontopediatria">
+
+                                    <table border="0">
+                                        <thead>
+                                            <tr>
+                                                <th> <img src="" th:src="@{/image/odontopediatria.png}" alt=""/></th>
+                                                <td>
+
+                                                    <h2>Odontopediatria </h2>
+
+                                                    <p>
+
+                                                        La odontopediatría es la rama de la odontología que se encarga del diagnóstico y tratamiento de las enfermedades dentales infantiles desde la temprana infancia hasta la entrada en la pubertad.
+
+                                                        <br>El objetivo de los tratamientos de odontopediatría es acompañar el crecimiento y desarrollo de una correcta dentición para detectar y evitar problemas bucodentales severos en la edad adulta. En esta edad es muy importante incorporar buenos hábitos de salud e higiene dental, así como dar respuesta inmediata a problemas que puedan aparecer, en muchos casos sobre la dentición temporal, o dientes de leche.   
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </thead>
+
+                                    </table>
+
+                                </section>
+
+
+                                <section id = "Ortodoncia">
+
+
+                                    <table border="0">
+                                        <thead>
+                                            <tr>
+
+                                                <td>
+
+                                                    <h2>Ortodoncia </h2>
+
+                                                    <p> 
+
+                                                        La ortodoncia es una rama de la odontología que estudia, previene y corrige problemas dentales como desviación en la posición de los dientes, apiñamientos o diastemas (espacios entre los dientes), la forma de las arcadas dentales o problemas de mordida, para restablecer el equilibrio entre la forma y función de la boca mejorando también la estética facial.     
+
+                                                        Además, la ortodoncia se enfrenta a problemas mayores como la corrección de alteraciones en la mandíbula, el maxilar superior o incluso la cara y especialmente trastornos funcionales de la masticación.    
+                                                    </p>
+                                                </td>
+
+                                                <th> <img src="" th:src="@{/image/braces.png}" alt=""/></th>
+                                            </tr>
+                                        </thead>
+
+                                    </table>
+
+                                </section>
+
+                            </section>
+
+                            <footer class="pie-pagina">
+                                <div class="grupo-1">
+                                    <div class="box">
+                                        <figure>
+                                            <a href="#">
+                                                <img src="" th:src="@{/image/Logo.jpg}" alt="logo pagina">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="box">
+                                        <h2>SOBRE NOSOTROS</h2>
+                                        <p>La Dra. María Jesús Vargas Víquez es graduada de la Universidad Latinoamericana de Ciencia y Tecnología (ULACIT).</p>
+                                        <p>“Mi misión es dar mi mejor trabajo y amor a mis pacientes"</p>
+                                    </div>
+                                    <div class="box">
+                                        <h2>SIGUENOS</h2>
+                                        <div class="red-social">
+                                            <a href="https://www.facebook.com/Dra-Maria-Vargas-Viquez-664610657264413/" class="fa fa-facebook"></a>
+                                            <a href="https://instagram.com/dramariavargasviquez?utm_medium=copy_link" class="fa fa-instagram"></a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grupo-2">
+                                    <small>&copy; 2021 <b> </b> - Todos los Derechos Reservados.</small>
+                                </div>
+                            </footer>
+
+                        </body>
+                        </html>
