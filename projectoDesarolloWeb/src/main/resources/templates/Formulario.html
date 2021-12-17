@@ -12,7 +12,7 @@
             <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
 
             <nav th:replace="layout/navigationBar :: navBar"> </nav>
-            
+
         </header>
 
         <section id = "Formulario">
@@ -24,7 +24,7 @@
                 de los datos que usted indicara en el formulario, siento estos utilizados solamente con fines médicos para mejorar nuestra atención para con usted. 
             </p>
 
-            <form th:action="@{/Guardar Formulario}" th:object="${usuarioForm}">
+            <form th:action="@{/Guardar Formulario/} + ${usuario.id_usuarios} + '/' + ${screen}" th:object="${usuarioForm}">
 
                 <h2> Información Paciente </h2>
                 <p>
@@ -129,7 +129,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>  <select id="transfucionesTransplantes" name="transfucionesTransplantes" th:field="*{transfusiones_transplantes}">
+                            <td> <label for="alergias"> Transfuciones o Transplantes: </label> </td>
+                            <td>    <select id="transfucionesTransplantes" name="transfucionesTransplantes" th:field="*{transfusiones_transplantes}">
                                     <option value="Sí"> Sí </option>
                                     <option value="No"> No </option>
                                 </select>   </td>

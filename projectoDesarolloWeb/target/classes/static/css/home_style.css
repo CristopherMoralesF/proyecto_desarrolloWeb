@@ -477,14 +477,14 @@ table{
 	background-color:#ccc;
 }
 
-form label{
+#formulario_contacto form label{
 	width:72px;
 	font-weight:bold;
 	display:inline-block;
 }
 
-form input[type="text"],
-form input[type="email"]{
+#formulario_contacto form input[type="text"],
+#formulario_contacto form input[type="email"]{
 	width:180px;
 	padding:3px 10px;
 	border:1px solid #f6f6f6;
@@ -494,7 +494,7 @@ form input[type="email"]{
 	display:inline-block;
 }
 
-#enviar{
+#formulario_contacto #enviar{
 	width:100%;
 	padding:8px 16px;
 	margin-top:32px;
@@ -505,11 +505,11 @@ form input[type="email"]{
 	background-color:#000;
 } 
 
-#enviar:hover{
+#formulario_contacto #enviar:hover{
 	cursor:pointer;
 }
 
-textarea{
+#formulario_contacto textarea{
 	width:100%;
 	height:100px;
 	border:1px solid #f6f6f6;

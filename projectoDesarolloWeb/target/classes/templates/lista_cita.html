@@ -22,7 +22,7 @@
             <br/>
             
 
-            <a th:href="@{/Crear Cita/} + ${usuario.id_usuarios}">Crear Citas</a>
+            <a th:href="@{/Crear Cita} + '/' + ${cita.id_usuarios} + '/' + ${usuario.id_usuarios} + '/' + ${screen}">Crear Citas</a>
             
             <div th:if="${citas !=null}">
                 <table border="1">
@@ -41,7 +41,7 @@
                         <td th:text="${cita.fecha}"/>
                         <td th:text="${cita.hora}"/>
                         <td th:text="${cita.tratamiento}"/>
-                        <td><a th:href="@{/eliminar/} + ${cita.id_citas} + '/' + ${cita.id_usuarios}"/>Eliminar</td>
+                        <td><a th:href="@{/eliminar/} + ${cita.id_citas} + '/' + ${usuario.id_usuarios} + '/' + ${screen}"/>Eliminar</td>
                     </tr>
                 </table>
             </div>

@@ -36,8 +36,8 @@
                         <td th:text="${usuariolista.apellidos}"/>
                         <td th:text="${usuariolista.edad}"/>
                         <td th:text="${usuariolista.Correo}"/>
-                        <td> <a th:href="@{/Las Citas/} + ${usuariolista.id_usuarios}"> Ver Citas </a> </td>
-                        <td> <a th:href="@{/Formulario/} + ${usuariolista.id_usuarios}"> Ver Información </a> </td>
+                        <td> <a th:href="@{/Las Citas/} + ${usuariolista.id_usuarios}+ '/' + ${usuario.id_usuarios}+ '/' + 'misClientes'"> Ver Citas </a> </td>
+                        <td> <a th:href="@{/Formulario/} + ${usuariolista.id_usuarios} + '/' + ${usuario.id_usuarios} + '/' + 'misClientes'"> Ver Información </a> </td>
                         <td> <a th:href="@{/Tratamientos/} + ${usuariolista.id_usuarios} + '/' + ${usuario.id_usuarios}"> Tratamientos </a> </td>
 
 

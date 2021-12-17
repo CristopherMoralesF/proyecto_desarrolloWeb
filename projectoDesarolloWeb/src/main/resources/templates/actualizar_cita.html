@@ -6,50 +6,46 @@
         <meta charset="UTF-8"/>
     </head>
     <body>
-         <header>
+        <header>
             <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
 
-              <nav class = "navbar">
-                <ul>
-                    <li> <a th:href="@{/}"> Sobre Nosotros </a> </li>
-                    <li> <a th:href="@{/Servicios/}"> Servicios </a> </li>
-                    <li> <a th:href="@{/Contacto/}"> Contactenos </a> </li>
-                    <li> <a th:href="@{/Ingresar Usuario/}"> Ingresar / Registrarse </a> </li>
-                </ul>
-            </nav>
+            <nav th:replace="layout/navigationBar :: navBar"> </nav>
 
         </header>
-            <section id = "InicioSesion">
-        <h2>Citas </h2>
-         <p> Por favor ingrese la información solicitada </p>
-       
-        <br/>
-        <form th:action="@{/Guardar Cita/} + ${cita.id_usuarios}" 
-              th:object="${cita}">
-            <input type="hidden" name="id" th:field="*{id_citas}"/>
-            <input type="hidden" name="id" th:field="*{id_usuarios}"/>
-            <label for="Fecha">Fecha de la cita:</label>
-            <input type="date" 
-                   required="true" 
-                   name="trip-start" 
-                   th:field="*{fecha}"/>
+        <section id = "InicioSesion">
+            <h2>Citas </h2>
+            <p> Por favor ingrese la información solicitada </p>
+
             <br/>
-            <label for="Hora">Hora:</label>
-            <input type="time" 
-                   required="true" 
-                   name="Hora" 
-                   th:field="*{hora}"/>
-            <br/>
-            <label for="tratamiento">Tratamiento:</label>
-            <input type="text" 
-                   required="true" 
-                   name="tratamiento" 
-                   th:field="*{tratamiento}"/>
-            <br/>
-           
-            <input class="IngresarUsuario" type="submit" value="Crear Cita" name="guardar"/>
-        </form>
-            </section>
+            <form th:action="@{/Guardar Cita/} + ${usuario.id_usuarios} + '/' + ${screen}" 
+                  th:object="${cita}">
+
+                <input type="hidden" name="id_cita" th:field="*{id_usuarios}"/>
+                <input type="hidden" name="id_usuario" th:field="*{id_usuarios}"/>
+
+
+                <label for="Fecha">Fecha de la cita:</label>
+                <input type="date" 
+                       required="true" 
+                       name="trip-start" 
+                       th:field="*{fecha}"/>
+                <br/>
+                <label for="Hora">Hora:</label>
+                <input type="time" 
+                       required="true" 
+                       name="Hora" 
+                       th:field="*{hora}"/>
+                <br/>
+                <label for="tratamiento">Tratamiento:</label>
+                <input type="text" 
+                       required="true" 
+                       name="tratamiento" 
+                       th:field="*{tratamiento}"/>
+                <br/>
+
+                <input class="IngresarUsuario" type="submit" value="Crear Cita" name="guardar"/>
+            </form>
+        </section>
     </body>
 </html>
 

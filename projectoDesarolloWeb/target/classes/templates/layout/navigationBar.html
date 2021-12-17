@@ -37,8 +37,8 @@
 
                                             <div th:case="*">
 
-                                                <li> <a th:href="@{/Las Citas/} + ${usuario.id_usuarios}"> Mis Citas </a> </li>
-                                                <li> <a th:href="@{/Formulario/} + ${usuario.id_usuarios}"> Información Usuario </a> </li>
+                                                <li> <a th:href="@{/Las Citas/} + ${usuario.id_usuarios} + '/' + ${usuario.id_usuarios} + '/' + 'nav'"> Mis Citas </a> </li>
+                                                <li> <a th:href="@{/Formulario/} + ${usuario.id_usuarios} + '/' + ${usuario.id_usuarios} + '/' + 'nav'"> Información Usuario </a> </li>
                                                 <li> <a th:href="@{/}"> Cerrar Sesión </a> </li>
 
                                             </div>
