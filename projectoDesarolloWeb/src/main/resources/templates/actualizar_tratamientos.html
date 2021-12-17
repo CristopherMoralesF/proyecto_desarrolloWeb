@@ -20,10 +20,10 @@
 
         </header>
             <section id = "InicioSesion">
-        <h2>[[#{tratamientos.datos}]]</h2>
+        <h2> Complete la información del tratamiento </h2>
         <hr/>
         <br/>
-        <form th:action="@{/guardar tratamientos}" 
+        <form th:action="@{/guardar tratamientos/} + ${tratamientos.id_Usuario} + '/' + ${usuario.id_usuarios} " 
               th:object="${tratamientos}">
             <input type="hidden" name="id_tratamientos" th:field="*{id_tratamientos}"/>
             <input type="hidden" name="id_Usuario" th:field="*{id_Usuario}"/>

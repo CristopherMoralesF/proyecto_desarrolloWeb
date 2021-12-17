@@ -18,8 +18,9 @@
 
         <section id = "misClientes">
             <br/>
-            <a th:href="@{/Crear Tratamientos}"> Crear Tratamiento </a>
-            <div th:if="${tratamiento !=null and !tratamiento.empty}">
+            <a th:href="@{/Crear Tratamientos/} + ${tratamiento.id_Usuario} + '/' + ${usuario.id_usuarios}"> Crear Tratamiento </a>
+            
+            <div th:if="${tratamientos !=null and !tratamientos.empty}">
                 <table border="1">
                     <tr>
                         <th> Id Usuario </th>
@@ -27,19 +28,17 @@
                         <th> Duración </th>
                         <th> Precio </th>
                         <th> Eliminar </th>
-                        <th> Editar </th>
                     </tr>
-                    <tr th:each="tratamientos : ${tratamiento}">
-                        <td th:text="${tratamientos.id_Usuario}"/>
-                        <td th:text="${tratamientos.nombre}"/>
-                        <td th:text="${tratamientos.duracion}"/>
-                        <td th:text="${tratamientos.precio}"/>
-                        <td><a th:href="@{/eliminar/} + ${tratamientos.id_tratamientos}" th:text="#{accion.eliminar}"/></td>
-                        <td><a th:href="@{/editar/} + ${tratamientos.id_tratamientos}" th:text="#{accion.editar}"/></td>
+                    <tr th:each="tratamientosList : ${tratamientos}">
+                        <td th:text="${tratamientosList.id_Usuario}"/>
+                        <td th:text="${tratamientosList.nombre}"/>
+                        <td th:text="${tratamientosList.duracion}"/>
+                        <td th:text="${tratamientosList.precio}"/>
+                        <td><a th:href="@{/Eliminar Tratamiento/} + ${tratamientosList.id_tratamientos} + '/' + ${tratamientosList.id_Usuario} + '/' + ${usuario.id_usuarios}" th:text="#{accion.eliminar}"/></td>
                     </tr>
                 </table>
             </div>
-            <div th:if="${tratamiento == null or tratamiento.empty}">
+            <div th:if="${tratamientos == null or tratamientos.empty}">
                 <p> No se encuentran tratamientos en la lista</p>
             </div>
 
