@@ -22,11 +22,12 @@
             <section id = "InicioSesion">
         <h2>Citas </h2>
          <p> Por favor ingrese la información solicitada </p>
-        <a th:href="@{/Cita_Usuario}">Regresar las citas</a>
+       
         <br/>
         <form th:action="@{/Guardar Cita}" 
               th:object="${cita}">
-            <input type="hidden" name="id" th:field="*{id}"/>
+            <input type="hidden" name="id" th:field="*{id_citas}"/>
+            <input type="hidden" name="id" th:field="*{id_usuarios}"/>
             <label for="Fecha">Fecha de la cita:</label>
             <input type="date" 
                    required="true" 
@@ -46,7 +47,7 @@
                    th:field="*{tratamiento}"/>
             <br/>
            
-            <input class="IngresarUsuario" type="submit" value="Crear Usuario" name="guardar"/>
+            <input class="IngresarUsuario" type="submit" value="Crear Cita" name="guardar"/>
         </form>
             </section>
     </body>

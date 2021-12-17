@@ -15,8 +15,8 @@ public class ControllerCita {
      @Autowired   
 private CitaService citaService;
 
-    @GetMapping("/Crear Cita")
-    public String crearUsuario(Cita cita) {
+    @GetMapping("/Crear Cita/")
+    public String crearCita(Cita cita) {
 
         return "actualizar_cita";
 
@@ -26,19 +26,19 @@ private CitaService citaService;
     public String guardar(Cita cita) {
 
         citaService.guardar(cita);
-        return "redirect:/";
+        return "redirect:/lista cita";
 
     }
 
     
-    @GetMapping("/Las Citas")
-    public String listaClientes(Model model){
+     @GetMapping("/Las Citas/{id_usuarios}")
+    public String listaCitas(Model model){
         
         var citas = citaService.getCitas();
         
         model.addAttribute("citas",citas);
         
-        return "Cita_Usuario";
+        return "lista_cita";
         
     }
 

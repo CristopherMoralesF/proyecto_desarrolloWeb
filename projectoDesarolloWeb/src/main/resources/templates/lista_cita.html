@@ -26,7 +26,7 @@
         <section id = "misClientes">
        
         <a th:href="@{/Crear Cita}">Crear Citas</a>
-        <div th:if="${citas !=null and !cita.empty}">
+        <div th:if="${citas !=null}">
             <table border="1">
                 <tr>
                     <th>ID de la cita</th>
@@ -38,16 +38,16 @@
                 </tr>
                 <tr th:each="cita : ${citas}">
                     <td th:text="${cita.id_citas}"/>
-                    <td th:text="${cita.id_Usuario}"/>
+                    <td th:text="${cita.id_usuarios}"/>
                     <td th:text="${cita.fecha}"/>
                     <td th:text="${cita.hora}"/>
                     <td th:text="${cita.tratamiento}"/>
-                    <td><a th:href="@{/eliminar/} + ${cita.id_cita}"/>Eliminar</td>
-                    <td><a th:href="@{/editar/} + ${cita.id_cita}" />Editar</td>
+                    <td><a th:href="@{/eliminar/} + ${cita.id_citas}"/>Eliminar</td>
+                    <td><a th:href="@{/editar/} + ${cita.id_citas}" />Editar</td>
                 </tr>
             </table>
         </div>
-        <div th:if="${cita == null or citas.empty}">
+        <div th:if="${citas == null}">
             <p>No tiene lista registrados</p>
         </div>
         
