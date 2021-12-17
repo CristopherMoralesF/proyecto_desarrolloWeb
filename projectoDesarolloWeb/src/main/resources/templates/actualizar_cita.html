@@ -24,7 +24,7 @@
          <p> Por favor ingrese la información solicitada </p>
        
         <br/>
-        <form th:action="@{/Guardar Cita}" 
+        <form th:action="@{/Guardar Cita/} + ${cita.id_usuarios}" 
               th:object="${cita}">
             <input type="hidden" name="id" th:field="*{id_citas}"/>
             <input type="hidden" name="id" th:field="*{id_usuarios}"/>

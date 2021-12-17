@@ -29,14 +29,16 @@
                         <th> Correo </th>
                         <th> Citas Clientes </th>
                         <th> Información cliente </th>
+                        <th> Tratamientos cliente </th>
                     </tr>
-                    <tr th:each="usuario : ${usuarios}">
-                        <td th:text="${usuario.nombre}"/>
-                        <td th:text="${usuario.apellidos}"/>
-                        <td th:text="${usuario.edad}"/>
-                        <td th:text="${usuario.Correo}"/>
-                        <td> <a th:href="@{/Las Citas/} + ${usuario.id_usuarios}"> Ver Citas </a> </td>
-                        <td> <a th:href="@{/Formulario/} + ${usuario.id_usuarios}"> Ver Información </a> </td>
+                    <tr th:each="usuariolista : ${usuarios}">
+                        <td th:text="${usuariolista.nombre}"/>
+                        <td th:text="${usuariolista.apellidos}"/>
+                        <td th:text="${usuariolista.edad}"/>
+                        <td th:text="${usuariolista.Correo}"/>
+                        <td> <a th:href="@{/Las Citas/} + ${usuariolista.id_usuarios}"> Ver Citas </a> </td>
+                        <td> <a th:href="@{/Formulario/} + ${usuariolista.id_usuarios}"> Ver Información </a> </td>
+                        <td> <a th:href="@{/Tratamientos/} + ${usuariolista.id_usuarios} + '/' + ${usuario.id_usuarios}"> Tratamientos </a> </td>
 
 
                     </tr>

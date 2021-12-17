@@ -26,18 +26,18 @@
                                         <li> <a th:href="@{/Contacto/} + ${usuario.id_usuarios}"> Contactenos </a> </li>
 
 
-                                        <div th:switch="${usuario.Correo}">
+                                        <div th:switch="${usuario.id_usuarios}">
 
-                                            <div th:case="'admin@admin.com'">
+                                            <div th:case="10">
 
-                                                <li> <a th:href="@{/Mis Clientes/}"> Mis Clientes </a> </li>
+                                                <li> <a th:href="@{/Mis Clientes/}+ ${usuario.id_usuarios}"> Mis Clientes </a> </li>
                                                 <li> <a th:href="@{/}"> Cerrar Sesión </a> </li>
 
                                             </div>
 
                                             <div th:case="*">
 
-                                                <li> <a href="#home_admin"> Mis Citas </a> </li>
+                                                <li> <a th:href="@{/Las Citas/} + ${usuario.id_usuarios}"> Mis Citas </a> </li>
                                                 <li> <a th:href="@{/Formulario/} + ${usuario.id_usuarios}"> Información Usuario </a> </li>
                                                 <li> <a th:href="@{/}"> Cerrar Sesión </a> </li>
 

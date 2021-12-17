@@ -1,0 +1,53 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" th:href="@{/css/home_style.css}"/>
+        <title>Tratamientos</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+         <header>
+            <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
+
+              <nav class = "navbar">
+                <ul>
+                    <li> <a th:href="@{/}"> Sobre Nosotros </a> </li>
+                    <li> <a th:href="@{/Servicios/}"> Servicios </a> </li>
+                    <li> <a th:href="@{/Contacto/}"> Contactenos </a> </li>
+                    <li> <a th:href="@{/Ingresar Usuario/}"> Ingresar / Registrarse </a> </li>
+                </ul>
+            </nav>
+
+        </header>
+            <section id = "InicioSesion">
+        <h2>[[#{tratamientos.datos}]]</h2>
+        <hr/>
+        <br/>
+        <form th:action="@{/guardar tratamientos}" 
+              th:object="${tratamientos}">
+            <input type="hidden" name="id_tratamientos" th:field="*{id_tratamientos}"/>
+            <input type="hidden" name="id_Usuario" th:field="*{id_Usuario}"/>
+            <label for="Nombre"> Nombre </label>
+            <input type="text" 
+                   required="true" 
+                   name="Nombre" 
+                   th:field="*{nombre}"/>
+            <br/>
+            <label for="Duracion"> Duración </label>
+            <input type="text" 
+                   required="true" 
+                   name="Duracion" 
+                   th:field="*{duracion}"/>
+            <br/>
+            <label for="precio"> Precio </label>
+            <input type="text" 
+                   required="true" 
+                   name="precio" 
+                   th:field="*{precio}"/>
+            <br/>
+           
+            <input type="submit" th:value="#{accion.guardar}" name="guardar"/>
+        </form>
+            </section>
+    </body>
+</html>

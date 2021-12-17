@@ -75,23 +75,30 @@ public class ControllerUsuario {
 
     }
 
-    @GetMapping("/Mis Clientes")
-    public String listaClientes(Model model) {
+    @GetMapping("/Mis Clientes/{id}")
+    public String listaClientes(Model model,@PathVariable("id") int id) {
 
+        Usuario usuario = new Usuario(); 
+        usuario.setId_usuarios(Long.parseLong(String.valueOf(id)));
         var usuarios = usuarioService.getUsuarios();
 
+        model.addAttribute("usuario",usuario); 
         model.addAttribute("usuarios", usuarios);
 
         return "Mis_Clientes";
 
     }
 
-    @GetMapping("/Formulario/{id_usuarios}")
-    public String formularioCliente(Usuario usuario, Model model) {
+    @GetMapping("/Formulario/{id_usuarios}/{id}")
+    public String formularioCliente(Usuario usuario, Model model,@PathVariable("id") int id) {
 
         usuario = usuarioService.getUsuario(usuario);
-
-        model.addAttribute("usuario", usuario);
+        Usuario usuarioLog = new Usuario(); 
+        usuarioLog.setId_usuarios(Long.parseLong(String.valueOf(id)));
+        
+        
+        model.addAttribute("usuario",usuarioLog);
+        model.addAttribute("usuarioForm", usuario);
         return "Formulario";
 
     }

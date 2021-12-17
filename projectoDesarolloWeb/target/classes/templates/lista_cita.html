@@ -8,50 +8,48 @@
 
     <body>
 
-           <header>
+        <header>
             <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
 
-              <nav class = "navbar">
-                <ul>
-                    <li> <a th:href="@{/}"> Sobre Nosotros </a> </li>
-                    <li> <a th:href="@{/Servicios/}"> Servicios </a> </li>
-                    <li> <a th:href="@{/Contacto/}"> Contactenos </a> </li>
-                    <li> <a th:href="@{/Ingresar Usuario/}"> Ingresar / Registrarse </a> </li>
-                </ul>
-            </nav>
+            <nav th:replace="layout/navigationBar :: navBar"> </nav>
+
 
         </header>
 
-   
+
         <section id = "misClientes">
-       
-        <a th:href="@{/Crear Cita}">Crear Citas</a>
-        <div th:if="${citas !=null}">
-            <table border="1">
-                <tr>
-                    <th>ID de la cita</th>
-                    <th>ID del Usuario</th>
-                    <th>Fecha de la cita</th>
-                    <th>Hora de cita</th>
-                    <th>Tratamiento</th>
-                   
-                </tr>
-                <tr th:each="cita : ${citas}">
-                    <td th:text="${cita.id_citas}"/>
-                    <td th:text="${cita.id_usuarios}"/>
-                    <td th:text="${cita.fecha}"/>
-                    <td th:text="${cita.hora}"/>
-                    <td th:text="${cita.tratamiento}"/>
-                    <td><a th:href="@{/eliminar/} + ${cita.id_citas}"/>Eliminar</td>
-                    <td><a th:href="@{/editar/} + ${cita.id_citas}" />Editar</td>
-                </tr>
-            </table>
-        </div>
-        <div th:if="${citas == null}">
-            <p>No tiene lista registrados</p>
-        </div>
-        
-        
+
+            <br/>
+            
+
+            <a th:href="@{/Crear Cita/} + ${usuario.id_usuarios}">Crear Citas</a>
+            
+            <div th:if="${citas !=null}">
+                <table border="1">
+                    <tr>
+                        <th>ID de la cita</th>
+                        <th>ID del Usuario</th>
+                        <th>Fecha de la cita</th>
+                        <th>Hora de cita</th>
+                        <th>Tratamiento</th>
+                        <th>Eliminar</th>
+
+                    </tr>
+                    <tr th:each="cita : ${citas}">
+                        <td th:text="${cita.id_citas}"/>
+                        <td th:text="${cita.id_usuarios}"/>
+                        <td th:text="${cita.fecha}"/>
+                        <td th:text="${cita.hora}"/>
+                        <td th:text="${cita.tratamiento}"/>
+                        <td><a th:href="@{/eliminar/} + ${cita.id_citas} + '/' + ${cita.id_usuarios}"/>Eliminar</td>
+                    </tr>
+                </table>
+            </div>
+            <div th:if="${citas == null}">
+                <p>No tiene lista registrados</p>
+            </div>
+
+
         </section> 
 
     </body>

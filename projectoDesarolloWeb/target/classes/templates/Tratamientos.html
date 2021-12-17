@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns = "http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Tratamientos </title>
+        <link rel="stylesheet" th:href="@{/css/home_style.css}"/>
+    </head>
+
+    <body>
+
+        <header>
+            <img src="" th:src="@{/image/Logo.jpg}" alt=""/>
+
+            <nav th:replace="layout/navigationBar :: navBar"> </nav>
+
+        </header>
+
+
+        <section id = "misClientes">
+            <br/>
+            <a th:href="@{/Crear Tratamientos}"> Crear Tratamiento </a>
+            <div th:if="${tratamiento !=null and !tratamiento.empty}">
+                <table border="1">
+                    <tr>
+                        <th> Id Usuario </th>
+                        <th> Nombre </th>
+                        <th> Duración </th>
+                        <th> Precio </th>
+                        <th> Eliminar </th>
+                        <th> Editar </th>
+                    </tr>
+                    <tr th:each="tratamientos : ${tratamiento}">
+                        <td th:text="${tratamientos.id_Usuario}"/>
+                        <td th:text="${tratamientos.nombre}"/>
+                        <td th:text="${tratamientos.duracion}"/>
+                        <td th:text="${tratamientos.precio}"/>
+                        <td><a th:href="@{/eliminar/} + ${tratamientos.id_tratamientos}" th:text="#{accion.eliminar}"/></td>
+                        <td><a th:href="@{/editar/} + ${tratamientos.id_tratamientos}" th:text="#{accion.editar}"/></td>
+                    </tr>
+                </table>
+            </div>
+            <div th:if="${tratamiento == null or tratamiento.empty}">
+                <p> No se encuentran tratamientos en la lista</p>
+            </div>
+
+
+        </section> 
+
+    </body>
+</html>
